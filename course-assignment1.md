@@ -1,8 +1,5 @@
 ---
-output:
-  word_document: default
-  pdf_document: default
-  html_document: default
+output: html_document
 ---
 ### Reproducible Research Course Assignment 1
 
@@ -12,35 +9,7 @@ output:
 
 ```r
 library(ggplot2)
-```
-
-```
-## Warning: package 'ggplot2' was built under R version 3.5.1
-```
-
-```r
 library(dplyr)
-```
-
-```
-## Warning: package 'dplyr' was built under R version 3.5.1
-```
-
-```
-## 
-## Attaching package: 'dplyr'
-```
-
-```
-## The following objects are masked from 'package:stats':
-## 
-##     filter, lag
-```
-
-```
-## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union
 ```
 
 ###### Read the activity file and store in activity variable
@@ -212,10 +181,6 @@ activity2 <- mutate(activity2,  day = ifelse( weekdays(activity2$date) == "Satur
                                  weekdays(activity2$date) == "Sunday",
                                  "weekend",
                                  "weekday"))  
-```
-
-```
-## Warning: package 'bindrcpp' was built under R version 3.5.1
 ```
 
 ###### Create a time series plot for 5 minute interval and average number of steps taken on weekend or weekday
